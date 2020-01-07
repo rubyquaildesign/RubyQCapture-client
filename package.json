@@ -1,0 +1,21 @@
+{
+  "name": "@rupertofly/capture-client",
+  "version": "0.1.0",
+  "description": "client for capture",
+  "main": "dist/index.js",
+  "repository": "git@github.com:Rupertofly/RubyQCapture-client.git",
+  "author": "Ruby Quail <ruby@rubyquail.design>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "test": "parcel ./tests/index.html -d ./tests/cache"
+  },
+  "dependencies": {
+    "socket.io-client": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/socket.io-client": "^1.4.32",
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^3.7.4"
+  }
+}
