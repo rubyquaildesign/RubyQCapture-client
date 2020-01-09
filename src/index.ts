@@ -29,7 +29,12 @@ export class CaptureClient {
     );
   }
   capture() {
-    this.socket.emit('capture', this.canvas.toDataURL());
+    let pm = new Promise((res, reg) => {
+      this.socket.emit('capture', this.canvas.toDataURL(), () => {
+        res();
+      });
+    });
+    return pm;
   }
 }
 
