@@ -10,6 +10,7 @@
     }
   },
   "main": "dist/index.cjs",
+  "types": "dist/index.d.ts",
   "repository": "git@github.com:Rupertofly/RubyQCapture-client.git",
   "author": "Ruby Quail <ruby@rubyquail.design>",
   "license": "MIT",
