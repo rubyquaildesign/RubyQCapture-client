@@ -1,4 +1,5 @@
-import * as io from 'socket.io-client';
+import io from 'socket.io-client';
+import type { Socket} from 'socket.io-client'
 interface startArguments {
   frameRate?: number;
   maxLength?: number;
@@ -9,9 +10,9 @@ export class CaptureClient {
   width: number = 0;
   height: number = 10;
   canvas: HTMLCanvasElement;
-  socket: io.Socket;
+  socket: Socket;
   constructor(port: number, cvs: HTMLCanvasElement) {
-    this.socket = io.connect(`http://localhost:${port}`);
+    this.socket = io(`localhost:${port}`);
     this.socket.on('connect', () => console.log(`connected to server`));
     this.canvas = cvs;
     this.width = cvs.width;
